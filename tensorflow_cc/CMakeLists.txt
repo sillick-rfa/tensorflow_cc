@@ -7,10 +7,10 @@ project(
 # Static library with no GPU support is built by default.
 # Use the following option to build a shared library with GPU support.
 # If enabled, bazel has to be installed.
-option(TENSORFLOW_SHARED "Build shared library (required for GPU support)." OFF)
-option(ALLOW_CUDA "When building the shared library, try to find and use CUDA." ON)
+option(TENSORFLOW_SHARED "Build shared library (required for GPU support)." ON)
+option(ALLOW_CUDA "When building the shared library, try to find and use CUDA." OFF)
 option(REQUIRE_CUDA "When building the shared library, make sure to find and use CUDA (implies ALLOW_CUDA)." OFF)
-option(TENSORFLOW_STATIC "Build static library." ON)
+option(TENSORFLOW_STATIC "Build static library." OFF)
 set(TENSORFLOW_TAG "v1.15.0" CACHE STRING "The tensorflow release tag to be checked out (default v1.15.0).")
 option(SYSTEM_PROTOBUF "Use system protobuf instead of static protobuf from contrib/makefile." OFF)
 set(TARGET_CXX_STANDARD "cxx_std_11" CACHE STRING "C++ standard to be enforced when linking to TensorflowCC targets (e.g., cxx_std_11).")
