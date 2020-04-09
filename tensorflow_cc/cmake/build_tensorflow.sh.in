@@ -96,6 +96,6 @@ fi
 bazel build --config=opt \
             --config=monolithic \
             $cuda_config_opts \
-            --local-ram-resources=2048 \
+            --local_ram_resources=2048 \
             tensorflow:libtensorflow_cc.so
 bazel shutdown
