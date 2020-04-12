@@ -98,6 +98,10 @@ bazel build --config=opt \
             $cuda_config_opts \
             --local_ram_resources=2048 \
             --config=native_arch_linux \
+            --config=noaws \
+            --config=nogcp \
+            --config=nohdfs \
+            --config=nonccl \
             tensorflow:libtensorflow_cc.so \
             tensorflow:install_headers
 bazel shutdown
