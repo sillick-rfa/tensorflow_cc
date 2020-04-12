@@ -97,7 +97,7 @@ bazel build --config=opt \
             --config=monolithic \
             $cuda_config_opts \
             --local_ram_resources=2048 \
-            --config=arch_native_linux \
+            --config=native_arch_linux \
             tensorflow:libtensorflow_cc.so \
             tensorflow:install_headers
 bazel shutdown
