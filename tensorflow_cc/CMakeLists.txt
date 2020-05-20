@@ -43,12 +43,12 @@ target_compile_features(tensorflow_cc INTERFACE ${TARGET_CXX_STANDARD})
 
 target_include_directories(
   tensorflow_cc INTERFACE
-  $<INSTALL_INTERFACE:/include/tensorflow/bazel-bin/tensorflow/include>
-  $<INSTALL_INTERFACE:/include/tensorflow/bazel-bin/tensorflow/include/src>
+  "${CMAKE_INSTALL_PREFIX}/include/tensorflow/bazel-bin/tensorflow/include"
+  "${CMAKE_INSTALL_PREFIX}/include/tensorflow/bazel-bin/tensorflow/include/src"
 )
 target_link_libraries(
   tensorflow_cc INTERFACE
-  tensorflow_cc
+  "${CMAKE_INSTALL_PREFIX}/lib/libtensorflow_cc.so.${PROJECT_VERSION_MAJOR}"
   dl pthread
 )
 
