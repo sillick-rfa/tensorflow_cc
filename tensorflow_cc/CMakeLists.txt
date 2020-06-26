@@ -48,7 +48,7 @@ target_include_directories(
 )
 target_link_libraries(
   tensorflow_cc INTERFACE
-  tensorflow_cc
+  "tensorflow_cc"
   dl pthread
 )
 
